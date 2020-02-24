@@ -1,0 +1,18 @@
+<h3>Employees</h3>
+<p-table [value]="employees">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Id</th>
+      <th>Firstname</th>
+      <th>Lastname</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-employees>
+    <tr>
+      <td>{{ employees.id }}</td>
+      <td>{{ employees.firstName }}</td>
+      <td>{{ employees.lastName }}</td>
+    </tr>
+  </ng-template>
+</p-table>
+<button (click)="fetchEmployees()">Reload</button>
